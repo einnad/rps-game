@@ -20,9 +20,16 @@ if rock and rock
 if paper and paper
 if scissors and scissors */
 
+let computerChoice = getComputerChoice();
+let playerChoice;
+
 function playRound(playerChoice, computerChoice) {
-    switch() {
-        case rock, scissors
-        return "You did it!"
+    if (rock, scissors || paper, rock || scissors, paper) {
+        return "You Win!";
+    } else if (rock, rock || paper, paper || scissors, scissors) {
+        return "Draw!";
+    } else {
+        return "You lose, try again.";
     }
+        
 }
