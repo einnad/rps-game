@@ -21,7 +21,7 @@ function getComputerChoice() {
 }
 
 computerChoice = getComputerChoice();
-console.log(computerChoice);
+console.log(playerChoice, computerChoice);
 
 /* if rock and scissors
 if rock and paper
@@ -55,7 +55,7 @@ function game() {
        the 'loop' ends after five round and if player score > computer score then player wins.
        if computer score > player score then player loses.
        new game prompt? button */
-    playRound() 
+    playRound(playerChoice, computerChoice) 
         if (playerChoice === "rock" && computerChoice === "scissors") {
             playerScore++;
             console.log(playerScore, computerScore);
@@ -80,7 +80,11 @@ function game() {
             computerScore++;
             console.log(playerScore, computerScore);
         } else console.log(playerScore, computerScore);
-    playRound() 
+    getComputerChoice();
+    computerChoice = getComputerChoice();
+    playerChoice = prompt("Rock, paper or scissors?");
+    console.log(playerChoice, computerChoice);
+    playRound(playerChoice, computerChoice) 
         if (playerChoice === "rock" && computerChoice === "scissors") {
             playerScore++;
             console.log(playerScore, computerScore);
@@ -105,7 +109,11 @@ function game() {
             computerScore++;
             console.log(playerScore, computerScore);
         } else console.log(playerScore, computerScore);
-    playRound() 
+    getComputerChoice();
+    computerChoice = getComputerChoice();
+    playerChoice = prompt("Rock, paper or scissors?");
+    console.log(playerChoice, computerChoice);
+    playRound(playerChoice, computerChoice) 
         if (playerChoice === "rock" && computerChoice === "scissors") {
             playerScore++;
             console.log(playerScore, computerScore);
@@ -130,7 +138,11 @@ function game() {
             computerScore++;
             console.log(playerScore, computerScore);
         } else console.log(playerScore, computerScore);
-    playRound() 
+    getComputerChoice();
+    computerChoice = getComputerChoice();
+    playerChoice = prompt("Rock, paper or scissors?");
+    console.log(playerChoice, computerChoice);
+    playRound(playerChoice, computerChoice) 
         if (playerChoice === "rock" && computerChoice === "scissors") {
             playerScore++;
             console.log(playerScore, computerScore);
@@ -155,7 +167,11 @@ function game() {
             computerScore++;
             console.log(playerScore, computerScore);
         } else console.log(playerScore, computerScore);
-    playRound() 
+    getComputerChoice();
+    computerChoice = getComputerChoice();
+    playerChoice = prompt("Rock, paper or scissors?");
+    console.log(playerChoice, computerChoice);
+    playRound(playerChoice, computerChoice) 
         if (playerChoice === "rock" && computerChoice === "scissors") {
             playerScore++;
             console.log(playerScore, computerScore);
