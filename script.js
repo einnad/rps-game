@@ -55,6 +55,7 @@ function game() {
        the 'loop' ends after five round and if player score > computer score then player wins.
        if computer score > player score then player loses.
        new game prompt? button */
+  for (let i = 0; i < 5; i++) {
     playRound(playerChoice, computerChoice)
     if (playerChoice === "rock" && computerChoice === "scissors") {
         playerScore++;
@@ -84,122 +85,11 @@ function game() {
     computerChoice = getComputerChoice();
     playerChoice = prompt("Rock, paper or scissors?");
     console.log(playerChoice, computerChoice);
-    console.log(playRound(playerChoice, computerChoice))
-    if (playerChoice === "rock" && computerChoice === "scissors") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "paper" && computerChoice === "rock") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "scissors" && computerChoice === "paper") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "rock" && computerChoice === "paper") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "paper" && computerChoice === "scissors") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "scissors" && computerChoice === "rock") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    } else console.log(playerScore, computerScore);
-    getComputerChoice();
-    computerChoice = getComputerChoice();
-    playerChoice = prompt("Rock, paper or scissors?");
-    console.log(playerChoice, computerChoice);
-    console.log(playRound(playerChoice, computerChoice)); 
-    if (playerChoice === "rock" && computerChoice === "scissors") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "paper" && computerChoice === "rock") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "scissors" && computerChoice === "paper") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "rock" && computerChoice === "paper") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "paper" && computerChoice === "scissors") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "scissors" && computerChoice === "rock") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    } else console.log(playerScore, computerScore);
-    getComputerChoice();
-    computerChoice = getComputerChoice();
-    playerChoice = prompt("Rock, paper or scissors?");
-    console.log(playerChoice, computerChoice);
-    console.log(playRound(playerChoice, computerChoice)); 
-    if (playerChoice === "rock" && computerChoice === "scissors") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "paper" && computerChoice === "rock") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "scissors" && computerChoice === "paper") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "rock" && computerChoice === "paper") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "paper" && computerChoice === "scissors") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "scissors" && computerChoice === "rock") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    } else console.log(playerScore, computerScore);
-    getComputerChoice();
-    computerChoice = getComputerChoice();
-    playerChoice = prompt("Rock, paper or scissors?");
-    console.log(playerChoice, computerChoice);
-    console.log(playRound(playerChoice, computerChoice)); 
-    if (playerChoice === "rock" && computerChoice === "scissors") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "paper" && computerChoice === "rock") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "scissors" && computerChoice === "paper") {
-        playerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "rock" && computerChoice === "paper") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "paper" && computerChoice === "scissors") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    }
-    if (playerChoice === "scissors" && computerChoice === "rock") {
-        computerScore++;
-        console.log(playerScore, computerScore);
-    } else console.log(playerScore, computerScore);
+  }
     if (playerScore > computerScore) {
         return "You won the game!";
     } else if (playerScore = computerScore) {
-        return "You managed to draw 5 times! You can have a gold star for that."
+        return "The game ended in a draw. I'll keep the gold star."
     } else return "You lost the game. Try again?";
 }
     
