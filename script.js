@@ -15,7 +15,7 @@ const btnScissors = document.querySelector(".scissors");
 const result = document.querySelector(".result");
 const compChoice = document.querySelector(".comp");
 
-const getResult = function (playerChoice, computerChoice) {
+function getResult(playerChoice, computerChoice) {
   compChoice.textContent = computerChoice;
   if (playerChoice === computerChoice) {
     result.textContent = "It's a tie!";
@@ -26,7 +26,17 @@ const getResult = function (playerChoice, computerChoice) {
   ) {
     result.textContent = "Player wins!";
   } else result.textContent = "Computer wins!";
-};
+}
+
+function getComputerChoice() {
+  const randomNumber = Math.floor(Math.random() * 3) + 1;
+  if (randomNumber === 1) {
+    computerChoice = "Rock";
+  } else if (randomNumber === 2) {
+    computerChoice = "Paper";
+  } else computerChoice = "Scissors";
+  return computerChoice;
+}
 
 btnRock.addEventListener("click", function () {
   playerChoice = "Rock";
@@ -45,13 +55,3 @@ btnScissors.addEventListener("click", function () {
   computerChoice = getComputerChoice();
   getResult(playerChoice, computerChoice);
 });
-
-function getComputerChoice() {
-  const randomNumber = Math.floor(Math.random() * 3) + 1;
-  if (randomNumber === 1) {
-    computerChoice = "Rock";
-  } else if (randomNumber === 2) {
-    computerChoice = "Paper";
-  } else computerChoice = "Scissors";
-  return computerChoice;
-}

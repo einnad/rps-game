@@ -1,0 +1,22 @@
+body {
+  background-color: #aed2ff;
+  font-family: sans-serif;
+}
+
+.buttons {
+  background-color: #27005d;
+  padding: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.results-box {
+  text-align: center;
+}
