@@ -43,14 +43,18 @@ function getComputerChoice() {
 
 function checkWinner() {
   if (playerScore >= 10) {
-    resultsBox.innerHTML = "";
-    userPoints.textContent = "";
-    compPoints.textContent = "";
+    clearFields();
   } else if (computerScore >= 10) {
-    resultsBox.innerHTML = "";
-    userPoints.textContent = "";
-    compPoints.textContent = "";
+    clearFields();
   } else return;
+}
+
+function clearFields() {
+  compChoice.textContent =
+    result.textContent =
+    userPoints.textContent =
+    compPoints.textContent =
+      "";
 }
 
 btnRock.addEventListener("click", function () {
@@ -75,6 +79,7 @@ btnScissors.addEventListener("click", function () {
 });
 
 reset.addEventListener("click", function () {
+  clearFields();
   playerScore = 0;
   computerScore = 0;
 });
