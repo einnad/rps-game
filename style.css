@@ -10,6 +10,23 @@ body {
   font-family: sans-serif;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+button {
+  background-color: #aed2ff;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+}
+
 .container {
   padding: 50px;
   display: flex;

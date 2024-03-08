@@ -5,6 +5,7 @@ const result = document.querySelector(".result");
 const compChoice = document.querySelector(".comp");
 const userPoints = document.querySelector(".p-points");
 const compPoints = document.querySelector(".c-points");
+const reset = document.querySelector(".reset");
 
 let computerChoice;
 let playerChoice;
@@ -40,22 +41,42 @@ function getComputerChoice() {
   return computerChoice;
 }
 
+function checkWinner() {
+  if (playerScore >= 10) {
+    resultsBox.innerHTML = "";
+    userPoints.textContent = "";
+    compPoints.textContent = "";
+  } else if (computerScore >= 10) {
+    resultsBox.innerHTML = "";
+    userPoints.textContent = "";
+    compPoints.textContent = "";
+  } else return;
+}
+
 btnRock.addEventListener("click", function () {
   playerChoice = "Rock";
   computerChoice = getComputerChoice();
   getResult(playerChoice, computerChoice);
+  checkWinner();
 });
 
 btnPaper.addEventListener("click", function () {
   playerChoice = "Paper";
   computerChoice = getComputerChoice();
   getResult(playerChoice, computerChoice);
+  checkWinner();
 });
 
 btnScissors.addEventListener("click", function () {
   playerChoice = "Scissors";
   computerChoice = getComputerChoice();
   getResult(playerChoice, computerChoice);
+  checkWinner();
+});
+
+reset.addEventListener("click", function () {
+  playerScore = 0;
+  computerScore = 0;
 });
 
 // Photo by Karolina Grabowska: https://www.pexels.com/photo/empty-white-business-card-on-wooden-desk-4465147/
