@@ -1,19 +1,15 @@
-/*user clicks r p s
-computer generates a random result
-int displays winner or loser message
-rerun */
-
-let computerChoice;
-let playerChoice;
-// for full game
-// let playerScore = 0;
-// let computerScore = 0;
-
 const btnRock = document.querySelector(".rock");
 const btnPaper = document.querySelector(".paper");
 const btnScissors = document.querySelector(".scissors");
 const result = document.querySelector(".result");
 const compChoice = document.querySelector(".comp");
+const userPoints = document.querySelector(".p-points");
+const compPoints = document.querySelector(".c-points");
+
+let computerChoice;
+let playerChoice;
+let playerScore = 0;
+let computerScore = 0;
 
 function getResult(playerChoice, computerChoice) {
   compChoice.textContent = computerChoice;
@@ -25,7 +21,13 @@ function getResult(playerChoice, computerChoice) {
     (playerChoice === "Scissors" && computerChoice === "Paper")
   ) {
     result.textContent = "Player wins!";
-  } else result.textContent = "Computer wins!";
+    playerScore++;
+    userPoints.textContent = playerScore;
+  } else {
+    result.textContent = "Computer wins!";
+    computerScore++;
+    compPoints.textContent = computerScore;
+  }
 }
 
 function getComputerChoice() {
@@ -55,3 +57,7 @@ btnScissors.addEventListener("click", function () {
   computerChoice = getComputerChoice();
   getResult(playerChoice, computerChoice);
 });
+
+// Photo by Karolina Grabowska: https://www.pexels.com/photo/empty-white-business-card-on-wooden-desk-4465147/
+// Photo by Pixabay: https://www.pexels.com/photo/tilt-shift-lens-photography-of-stone-161702/
+// Photo by Karolina Grabowska: https://www.pexels.com/photo/black-scissors-placed-on-beige-background-4226896/

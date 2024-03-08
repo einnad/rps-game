@@ -1,22 +1,48 @@
+* {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
 body {
   background-color: #aed2ff;
   font-family: sans-serif;
 }
 
-.buttons {
-  background-color: #27005d;
+.container {
   padding: 50px;
   display: flex;
   justify-content: space-evenly;
   border-radius: 10px;
 }
 
-button {
-  border: none;
-  border-radius: 10px;
-  padding: 20px;
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: dotted 5px #7bb6ff;
 }
 
 .results-box {
   text-align: center;
+  font-size: 28px;
+}
+
+.points {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 20px;
+}
+
+.points div {
+  display: flex;
+}
+
+.points div p {
+  font-size: 28px;
+  padding: 10px;
 }

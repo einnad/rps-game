@@ -4,19 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Rock, Paper, Scissors!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div class="buttons">
-      <button class="rock">Rock</button>
-      <button class="paper">Paper</button>
-      <button class="scissors">Scissors</button>
+    <div class="container">
+      <img src="img/rock.jpg" class="rock" />
+      <img src="img/paper.jpg" class="paper" />
+      <img src="img/scissors.jpg" class="scissors" />
     </div>
+
     <div class="results-box">
       <p>Computer chooses:</p>
       <p class="comp"></p>
       <p class="result"></p>
     </div>
+
+    <div class="points">
+      <div>
+        <p>Player:</p>
+        <p class="p-points"></p>
+      </div>
+
+      <div>
+        <p>Computer:</p>
+        <p class="c-points"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
