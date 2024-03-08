@@ -44,8 +44,10 @@ function getComputerChoice() {
 function checkWinner() {
   if (playerScore >= 10) {
     clearFields();
+    result.textContent = "You WIN! Press reset to play again.";
   } else if (computerScore >= 10) {
     clearFields();
+    result.textContent = "Unlucky. Press reset to try again.";
   } else return;
 }
 
